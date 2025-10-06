@@ -84,7 +84,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>📝 Cuestionario de Respuestas v0.1.5</h1>
+        <h1>📝 Cuestionario de Respuestas v{version}</h1>
         <p>Responde las siguientes preguntas</p>
       </header>
 

@@ -1,0 +1,32 @@
+appId: com.yourcompany.answersapp
+productName: AnswersApp
+directories:
+  output: release
+  buildResources: assets
+
+win:
+  target:
+    - nsis
+  icon: assets/icon.ico
+  # Para actualizaciones silenciosas en Windows, es altamente recomendable firmar el código
+  # Descomenta y configura lo siguiente si tienes un certificado de firma de código:
+  # certificateFile: path/to/certificate.pfx
+  # certificatePassword: ${env.CERTIFICATE_PASSWORD}
+
+nsis:
+  oneClick: true
+  perMachine: false
+  allowToChangeInstallationDirectory: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+
+publish:
+  provider: github
+  owner: YOUR_GITHUB_USERNAME
+  repo: YOUR_REPO_NAME
+  # Asegúrate de configurar GH_TOKEN en las variables de entorno para publicar
+  # export GH_TOKEN=your_github_personal_access_token
+  
+  # Ejemplo para servidor propio (comentado):
+  # provider: generic
+  # url: https://your-update-server.com/releases

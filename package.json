@@ -1,22 +1,19 @@
 {
   "name": "my-v0-project",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "main": "dist/main/main.js",
   "scripts": {
     "build:renderer": "vite build",
     "build:main": "tsc -p tsconfig.main.json",
     "build": "npm run build:renderer && npm run build:main",
-
-    "dev:renderer": "vite", 
+    "dev:renderer": "vite",
     "dev:main": "tsc -p tsconfig.main.json -w",
-  "dev:electron": "wait-on http://localhost:5173 && cross-env NODE_ENV=development ELECTRON_DISABLE_SECURITY_WARNINGS=1 electron .",
+    "dev:electron": "wait-on http://localhost:5173 && cross-env NODE_ENV=development ELECTRON_DISABLE_SECURITY_WARNINGS=1 electron .",
     "dev": "concurrently -k \"npm run dev:main\" \"npm run dev:renderer\" \"npm run dev:electron\"",
-
     "start": "electron .",
-  "dist": "npm run build && electron-builder --win",
-  "release": "npm run build && electron-builder --publish=always",
-
+    "dist": "npm run build && electron-builder --win",
+    "release": "npm run build && electron-builder --publish=always",
     "lint": "echo \"Add your linter command here\" && exit 0"
   },
   "dependencies": {
@@ -89,17 +86,17 @@
     "zod": "3.25.67"
   },
   "devDependencies": {
-  "@tailwindcss/postcss": "^4.1.9",
-  "@types/node": "^22",
-  "@types/react": "^19",
-  "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4.1.9",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "postcss": "^8.5",
     "tailwindcss": "^4.1.9",
     "tw-animate-css": "1.3.3",
     "typescript": "^5",
-  "concurrently": "^7.6.0",
-  "wait-on": "^7.0.1",
-  "cross-env": "^7.0.3"
-  ,"electron-builder": "^24.0.0"
+    "concurrently": "^7.6.0",
+    "wait-on": "^7.0.1",
+    "cross-env": "^7.0.3",
+    "electron-builder": "^24.0.0"
   }
 }

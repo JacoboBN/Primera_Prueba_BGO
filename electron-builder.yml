@@ -24,6 +24,8 @@ publish:
   provider: github
   owner: JacoboBN
   repo: Primera_Prueba_BGO
+  releaseType: release
+
   # Asegúrate de configurar GH_TOKEN en las variables de entorno para publicar
   # export GH_TOKEN=your_github_personal_access_token
   

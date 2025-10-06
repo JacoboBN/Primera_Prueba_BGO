@@ -84,7 +84,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>📝 Cuestionario de Respuestas</h1>
+        <h1>📝 Cuestionario de Respuestas actualizado</h1>
         <p>Responde las siguientes preguntas</p>
       </header>
 
@@ -97,7 +97,7 @@ export default function App() {
               type="text"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
-              placeholder="Ej: Juan Pérez"
+              placeholder="Ej: Antonio Jesús Pérez"
             />
           </div>
 

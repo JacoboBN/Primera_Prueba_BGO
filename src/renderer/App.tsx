@@ -91,7 +91,7 @@ export default function App() {
       <main className="main">
         <form className="form" onSubmit={(e) => e.preventDefault()}>
           <div className="form-group">
-            <label htmlFor="fullName">Nombre completo:</label>
+            <label htmlFor="fullName">Por favor, Nombre completo:</label>
             <input
               id="fullName"
               type="text"
